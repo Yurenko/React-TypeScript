@@ -1,0 +1,21 @@
+.icon {
+    width: 150px;
+    border-radius: 350px;
+}
+
+.pageFont {
+    font-weight: bold;
+}
+
+.paginator {
+    margin: 10px;
+}
+.pageNumber {
+    padding: 1px;
+  
+}
+
+.pageNumber.selectedPage {
+    font-weight: bold;
+    
+}

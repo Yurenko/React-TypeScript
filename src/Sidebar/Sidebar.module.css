@@ -1,0 +1,23 @@
+.Sidebar {
+    grid-area: s;
+    background-color: chartreuse;
+}
+
+.link {
+    color: white;
+}
+
+.item {
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.item a{
+    text-decoration: none;
+    color: rebeccapurple;
+}
+
+.item a.active{
+    color: rgb(255, 72, 0);
+}
+

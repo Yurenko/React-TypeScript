@@ -1,0 +1,16 @@
+.Navbar {
+    background-color: peru;
+    grid-area: n;
+   
+}
+
+.Navbar img {
+    width: 166px;
+    float: left;
+}
+
+.loginUser{
+    float: right;
+    color: white;
+    text-decoration: none;
+}

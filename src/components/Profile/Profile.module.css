@@ -1,0 +1,34 @@
+.Context {
+    margin: 10px 0 0 10px;
+}
+
+.Context img {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.mainPhoto{
+    max-width: 200px;
+}
+
+
+.iconPerson {
+    width: 50px;
+}
+
+.person {
+    display: flex;
+}
+
+.personName {
+    color: rgb(197, 228, 59);
+}
+
+.contacts{
+    padding-left: 20px;
+}
+.formError{
+    color: rgb(255, 0, 204);
+    border: red 1px solid;
+}
