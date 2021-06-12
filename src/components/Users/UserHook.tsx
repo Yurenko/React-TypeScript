@@ -39,7 +39,6 @@ const User: React.FC = () => {
 
 
     useEffect(() => {
-        debugger
         const parse = queryString.parse(history.location.search.substr(1)) as QueryParamsType
         let actualPage = currentPage
         let actualFilter = filter
@@ -62,7 +61,6 @@ const User: React.FC = () => {
     }, [])
 
     useEffect(() => {
-        debugger
         const query: QueryParamsType = {}
 
         if (!!filter.term) query.term = filter.term

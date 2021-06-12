@@ -82,7 +82,6 @@ export const actions = {
 
 export const getUsersThunk = (currentPage: number, pageSize: number, filter: FilterType): ThunkActionType =>
     async (dispatch) => {
-        debugger
         dispatch(actions.toggleIsFeatching(true));
         dispatch(actions.setCurrentPage(currentPage))
         dispatch(actions.searchUsers(filter))
