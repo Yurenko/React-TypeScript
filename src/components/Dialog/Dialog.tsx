@@ -56,7 +56,7 @@ let DialogesForm: React.FC<InjectedFormProps<DialogFormValuesType, OwnPropsType>
             <div>
                 {createField<LoginFormValuesTypeKeys>('New massage', 'newMassageText', [required, maxLength10], Textarea)}
             </div>
-            <button>Click Me</button>
+            <button className={s.button}>Click Me</button>
         </form>
     )
 }

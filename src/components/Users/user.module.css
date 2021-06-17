@@ -17,5 +17,20 @@
 
 .pageNumber.selectedPage {
     font-weight: bold;
-    
+}
+
+.button_active{
+    padding: 5px;
+    background-color: #54a0ff;
+    color: white;
+    border-radius: 20%;
+    border: none;
+}
+
+.button_passive{
+    padding: 5px;
+    background-color: #ffb554;
+    color: white;
+    border-radius: 20%;
+    border: none;
 }

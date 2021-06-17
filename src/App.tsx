@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import Sidebar from './Sidebar/Sidebar';
 import { Link, Route, withRouter } from 'react-router-dom';
 import ProfileConteiner from './components/Profile/ProfileConteiner'
-import Page from './Page/Page'
+import Friends from './Friends/Friens'
 import DialogesConteiner from './components/Dialog/DialogConteiner';
 import UsersConteiner from './components/Users/UsersConteiner'
 import Login from './components/Login/Login';
@@ -14,11 +13,11 @@ import Preloader from './components/common/Preloader/Preloader';
 import { AppReduser } from './redux/redux-store';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import "antd/dist/antd.css";
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import { UserOutlined, LaptopOutlined } from '@ant-design/icons';
 import Navbar from './components/Navbar/Navbar';
 
 const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 type DispatchPropsType = {
   initialazedApp: () => void
@@ -41,13 +40,13 @@ class App extends React.Component<PropsType> {
     }
     return (
       <Layout>
-        <Navbar/>
+        <Navbar />
         <Layout>
           <Sider width={200} className="site-layout-background">
             <Menu
               mode="inline"
-                // defaultSelectedKeys={['1']}
-                // defaultOpenKeys={['sub1']}
+              // defaultSelectedKeys={['1']}
+              // defaultOpenKeys={['sub1']}
               style={{ height: '100%', borderRight: 0 }}
             >
               <SubMenu key="sub1" icon={<UserOutlined />} title="My Profile">
@@ -56,7 +55,7 @@ class App extends React.Component<PropsType> {
               </SubMenu>
               <SubMenu key="sub2" icon={<LaptopOutlined />} title="Developers">
                 <Menu.Item key="5"><Link to='/users'>Users</Link></Menu.Item>
-                <Menu.Item key="6"><Link to='/page'>Page</Link></Menu.Item>
+                <Menu.Item key="6"><Link to='/page'>Best Friends</Link></Menu.Item>
               </SubMenu>
             </Menu>
           </Sider>
@@ -76,25 +75,13 @@ class App extends React.Component<PropsType> {
             >
               <Route path='/profile/:userId?' render={() => <ProfileConteiner />} />
               <Route path='/dialog' render={() => <DialogesConteiner />} />
-              <Route path='/page' render={() => <Page />} />
+              <Route path='/page' render={() => <Friends />} />
               <Route path='/users' render={() => <UsersConteiner />} />
               <Route path='/login' render={() => <Login />} />
             </Content>
           </Layout>
         </Layout>
       </Layout>
-
-
-
-
-
-
-
-
-
-
-
-
     );
   }
 }
@@ -107,7 +94,7 @@ const mapStateToProps = (state: AppReduser): MapPropsType => ({
 export default compose(withRouter,
   connect(mapStateToProps, { initialazedApp }))(App);
 
-//   <div className='container'>
+  //   <div className='container'>
   //     <NavbarContainer />
   //     <Sidebar />
   //     <Route path='/profile/:userId?' render={() => <ProfileConteiner />} />

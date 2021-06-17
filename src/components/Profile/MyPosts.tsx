@@ -1,9 +1,10 @@
-import React from 'react';
-import Comment from './Comment';
+import React from 'react'
+import Comment from './Comment'
 import { InjectedFormProps, reduxForm } from 'redux-form'
-import { maxLength, required } from '../../validators/validators';
-import { createField, GetStringKeys, Input } from '../common/FormControl/FormControl';
-import { InitialStateType } from '../../redux/profile-reduser';
+import { maxLength, required } from '../../validators/validators'
+import { createField, GetStringKeys, Input } from '../common/FormControl/FormControl'
+import { InitialStateType } from '../../redux/profile-reduser'
+import s from './Profile.module.css'
 
 export type MapPropsType = { postPage: InitialStateType }
 export type DispatchPropsType = { addPost: (newPostText: string) => void }
@@ -43,7 +44,7 @@ let MyPostsForm: React.FC<InjectedFormProps<PostFormValuesType, PropsType> & Pro
             <div>
                 {createField<PostValuesTypeKeys>('New Post', 'newPostText', [required, maxLength10], Input)}
             </div>
-            <button>Click Me</button>
+            <button className={s.button}>Click Me</button>
         </form>
     )
 }

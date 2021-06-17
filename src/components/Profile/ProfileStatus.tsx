@@ -1,4 +1,5 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react'
+import s from './Profile.module.css'
 
 type PropsType = {
 status: string
@@ -28,7 +29,7 @@ const ProfileStatus: React.FC<PropsType> = (props) => {
     }
 
     return (
-        <div>
+        <div className={s.status}>
             {!editMode &&
                 <div >
                     <span onDoubleClick={activeMode} >{status || 'Введіть свій статус'}</span>

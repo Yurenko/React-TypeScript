@@ -9,7 +9,7 @@ type PropsType = {
 }
 
 const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> & PropsType> = (props) => {
-    return <form onSubmit={props.handleSubmit}><button >save</button>
+return <form onSubmit={props.handleSubmit}><button className={s.button}>save</button>
         {props.error && <div className={s.formError}>
             {props.error}
         </div>}

@@ -24,10 +24,10 @@ const UserPage: React.FC<PropsType> = ({ user, followedIsFeatching, follow, unfo
 
                     {user.followed
 
-                        ? <button disabled={followedIsFeatching.some(id => id === user.id)} onClick={() => {
+                        ? <button disabled={followedIsFeatching.some(id => id === user.id)} className={s.button_active} onClick={() => {
                             unfollow(user.id)
                         }}>unfollow</button>
-                        : <button disabled={followedIsFeatching.some(id => id === user.id)} onClick={() => {
+                        : <button disabled={followedIsFeatching.some(id => id === user.id)} className={s.button_passive} onClick={() => {
                             follow(user.id)
                         }}>follow</button>}
                 </div>
@@ -35,10 +35,6 @@ const UserPage: React.FC<PropsType> = ({ user, followedIsFeatching, follow, unfo
             <span>
                 <div>{user.name}</div>
                 <div>{user.status}</div>
-            </span>
-            <span>
-                <div>{'user.location.city'}</div>
-                <div>{'user.location.country'}</div>
             </span>
         </div>
     )

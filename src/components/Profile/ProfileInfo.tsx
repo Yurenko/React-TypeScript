@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 import s from './Profile.module.css'
 import Preloader from '../common/Preloader/Preloader'
 import ProfileStatus from './ProfileStatus'
 import mainPhoto from '../../icon/avatar.png'
 import lev from '../../icon/lev.jpg'
-import { useState } from 'react';
-import ProfileDataFormRedux from './ProfileDataForm';
-import { ChangeEvent } from 'react';
-import { ContactsType, ProfileType } from '../../type/type';
+import { useState } from 'react'
+import ProfileDataFormRedux from './ProfileDataForm'
+import { ChangeEvent } from 'react'
+import { ContactsType, ProfileType } from '../../type/type'
 
 type PropsType = {
     saveProfie: (profile: ProfileType) => Promise<void>
@@ -37,7 +37,7 @@ const ProfileInfo: React.FC<PropsType> = (props) => {
             props.getPhoto(e.target.files[0])
         }
     }
-    
+
     return (
 
         <div>
@@ -46,7 +46,7 @@ const ProfileInfo: React.FC<PropsType> = (props) => {
             </div>
             <div >
                 <img src={props.profile.photos.large || mainPhoto} className={s.mainPhoto} />
-                {props.isOwner && <input type={'file'} onChange={onMainPhotoSelected} />}
+                {props.isOwner && <input type={'file'}  onChange={onMainPhotoSelected} />}
                 {editMode
                     ? <ProfileDataFormRedux initialValues={props.profile} profile={props.profile} onSubmit={onSubmit} />
                     : <ProfileData profile={props.profile} goToEditMode={() => setEditMode(true)} isOwner={props.isOwner} />}
@@ -65,7 +65,7 @@ type ProfileDataType = {
 
 }
 const ProfileData: React.FC<ProfileDataType> = ({ profile, goToEditMode, isOwner }) => {
-    return <div>{isOwner && <button onClick={goToEditMode}>edit</button>}
+    return <div>{isOwner && <button onClick={goToEditMode} className={s.button}>edit</button>}
         <div>
             <b>Full name:</b> {profile.fullName}
         </div>
@@ -81,9 +81,9 @@ const ProfileData: React.FC<ProfileDataType> = ({ profile, goToEditMode, isOwner
         <div>
             <b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
                 return <Contacts key={key} contactTitle={key} contactValue={profile.contacts[key as keyof ContactsType]} />
-                
+
             })}
-            
+
         </div>
     </div>
 }

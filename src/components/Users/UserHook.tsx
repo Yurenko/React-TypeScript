@@ -91,7 +91,7 @@ const User: React.FC = () => {
     return <div>
         <SearchFormick onFilterChanged={onFilterChanged} />
         {portionNumber > 1 &&
-            <button onClick={() => { setPortionNumber(portionNumber - 1) }} >PREV</button>
+            <button className={s.button_active} onClick={() => { setPortionNumber(portionNumber - 1) }} >PREV</button>
         }
         {
             page
@@ -103,7 +103,7 @@ const User: React.FC = () => {
                 })
         }
         {pagenationCount > portionNumber &&
-            <button onClick={() => { setPortionNumber(portionNumber + 1) }} >NEXT</button>
+            <button className={s.button_active} onClick={() => { setPortionNumber(portionNumber + 1) }} >NEXT</button>
         }
         {
             users.map((u, index) => <UserPage user={u}

@@ -32,3 +32,15 @@
     color: rgb(255, 0, 204);
     border: red 1px solid;
 }
+.button{
+    margin: 15px 0;
+    padding: 5px;
+    background-color: #54a0ff;
+    color: white;
+    border-radius: 20%;
+    border: none;
+}
+
+.status{
+    margin: 10px 0;
+}
