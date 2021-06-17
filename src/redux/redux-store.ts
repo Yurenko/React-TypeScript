@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import { reducer as formReducer } from 'redux-form'
 import appReduser from './app-reduser';
 import { ThunkAction } from 'redux-thunk';
-import { pageReduser } from './page-reduser1';
+import { friendsReduser } from './friends-reduser';
 
 let rootRedusers = combineReducers({
     postPage: profileReduser,
@@ -16,7 +16,7 @@ let rootRedusers = combineReducers({
     auth: authReduser,
     form: formReducer,
     app: appReduser,
-    page: pageReduser
+    friends: friendsReduser
 });
 
 type RootReduserType = typeof rootRedusers

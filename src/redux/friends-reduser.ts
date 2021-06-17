@@ -1,6 +1,6 @@
-import { PageAPI } from './../api/pageApi';
+import { PageAPI } from '../api/pageApi';
 import { InferActionsTypes, BaseThunkActionType } from './redux-store';
-import { UsersType } from './../type/type';
+import { UsersType } from '../type/type';
 const initialState = {
     userPage: [] as Array<UsersType>,
     friend: true as boolean,
@@ -8,7 +8,7 @@ const initialState = {
 }
 
 
-export const pageReduser = (state = initialState, actions: ActionsTypes): initialStateType => {
+export const friendsReduser = (state = initialState, actions: ActionsTypes): initialStateType => {
     switch (actions.type) {
         case 'SET_USER_PAGE':
             return { ...state, userPage: actions.usersPage }

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { PageThunk } from '../redux/page-reduser1'
+import { PageThunk } from '../redux/friends-reduser'
 import { AppReduser } from '../redux/redux-store'
 import icon from '../icon/avatar.png';
 import s from './friends.module.css'
@@ -8,7 +8,7 @@ import s from './friends.module.css'
 
 const Page1: React.FC = () => {
     const dispatch = useDispatch()
-    const userPageMap = useSelector((state: AppReduser) => state.page)
+    const userPageMap = useSelector((state: AppReduser) => state.friends)
     const toggleUser = () => {
         userPageMap.friend = !userPageMap.friend
         userPageMap.friend ? userPageMap.informText = 'Friends' : userPageMap.informText = 'Not friends' 
