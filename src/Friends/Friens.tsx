@@ -6,7 +6,7 @@ import icon from '../icon/avatar.png';
 import s from './friends.module.css'
 
 
-const Page1: React.FC = () => {
+const Page: React.FC = () => {
     const dispatch = useDispatch()
     const userPageMap = useSelector((state: AppReduser) => state.friends)
     const toggleUser = () => {
@@ -30,4 +30,4 @@ const Page1: React.FC = () => {
         })}
     </div>
 }
-export default Page1
+export default Page
